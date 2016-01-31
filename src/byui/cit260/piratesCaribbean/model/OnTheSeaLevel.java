@@ -12,36 +12,34 @@ import java.util.Objects;
  *
  * @author Misty
  */
-public class Player implements Serializable{
+public class OnTheSeaLevel implements Serializable{
     
-    //class instance variables
-    private String name;
-    private double bestTime;
+    
+    private String description;
+    private double travelTime;
 
-    public Player() {
+   
+    public String getDescription() {
+        return description;
     }
 
-    public String getName() {
-        return name;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public double getTravelTime() {
+        return travelTime;
     }
 
-    public double getBestTime() {
-        return bestTime;
-    }
-
-    public void setBestTime(double bestTime) {
-        this.bestTime = bestTime;
+    public void setTravelTime(double travelTime) {
+        this.travelTime = travelTime;
     }
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 29 * hash + Objects.hashCode(this.name);
-        hash = 29 * hash + (int) (Double.doubleToLongBits(this.bestTime) ^ (Double.doubleToLongBits(this.bestTime) >>> 32));
+        int hash = 5;
+        hash = 83 * hash + Objects.hashCode(this.description);
+        hash = 83 * hash + (int) (Double.doubleToLongBits(this.travelTime) ^ (Double.doubleToLongBits(this.travelTime) >>> 32));
         return hash;
     }
 
@@ -56,11 +54,11 @@ public class Player implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Player other = (Player) obj;
-        if (Double.doubleToLongBits(this.bestTime) != Double.doubleToLongBits(other.bestTime)) {
+        final OnTheSeaLevel other = (OnTheSeaLevel) obj;
+        if (Double.doubleToLongBits(this.travelTime) != Double.doubleToLongBits(other.travelTime)) {
             return false;
         }
-        if (!Objects.equals(this.name, other.name)) {
+        if (!Objects.equals(this.description, other.description)) {
             return false;
         }
         return true;
@@ -68,17 +66,17 @@ public class Player implements Serializable{
 
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + ", bestTime=" + bestTime + '}';
+        return "OnTheSeaLevel{" + "description=" + description + ", travelTime=" + travelTime + '}';
     }
 
-    void setBestTime(String string) {
+    void description(String string) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public void setBestTime() {
+    void travelTime(String string) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     
-        
+    
 }
