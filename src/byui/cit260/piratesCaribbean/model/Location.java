@@ -16,7 +16,10 @@ public class Location implements Serializable {
     
     
     private double visited;
-    private String levelName;
+    private String levelNameOne;
+    private String levelNameTwo;
+    private String levelNameThree;
+  
 
     public Location() {
     }
@@ -30,19 +33,37 @@ public class Location implements Serializable {
         this.visited = visited;
     }
 
-    public String getLevelName() {
-        return levelName;
+    public String getLevelNameOne() {
+        return levelNameOne;
     }
 
-    public void setLevelName(String levelName) {
-        this.levelName = levelName;
+    public void setLevelNameOne(String levelName) {
+        this.levelNameOne = levelName;
+    }
+
+    public String getLevelNameTwo() {
+        return levelNameTwo;
+    }
+
+    public void setLevelNameTwo(String levelName) {
+        this.levelNameTwo = levelName;
+    }
+    
+    public String getLevelNameThree() {
+        return levelNameThree;
+    }
+
+    public void setLevelNameThree(String levelName) {
+        this.levelNameThree = levelName;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 97 * hash + (int) (Double.doubleToLongBits(this.visited) ^ (Double.doubleToLongBits(this.visited) >>> 32));
-        hash = 97 * hash + Objects.hashCode(this.levelName);
+        hash = 71 * hash + (int) (Double.doubleToLongBits(this.visited) ^ (Double.doubleToLongBits(this.visited) >>> 32));
+        hash = 71 * hash + Objects.hashCode(this.levelNameOne);
+        hash = 71 * hash + Objects.hashCode(this.levelNameTwo);
+        hash = 71 * hash + Objects.hashCode(this.levelNameThree);
         return hash;
     }
 
@@ -61,20 +82,15 @@ public class Location implements Serializable {
         if (Double.doubleToLongBits(this.visited) != Double.doubleToLongBits(other.visited)) {
             return false;
         }
-        if (!Objects.equals(this.levelName, other.levelName)) {
+        if (!Objects.equals(this.levelNameOne, other.levelNameOne)) {
             return false;
         }
-        return true;
+        if (!Objects.equals(this.levelNameTwo, other.levelNameTwo)) {
+            return false;
+        }
+        return Objects.equals(this.levelNameThree, other.levelNameThree);
     }
 
-    @Override
-    public String toString() {
-        return "Location{" + "visited=" + visited + ", levelName=" + levelName + '}';
-    }
-
-    void setName(String treasure_Island) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
     
 }
+

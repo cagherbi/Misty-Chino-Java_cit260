@@ -25,67 +25,64 @@ public class PiratesCaribbean {
         Player playerOne = new Player();
         
             playerOne.setName("Johnny Depp");
-            playerOne.setBestTime();
+            playerOne.setBestTime(7.00);
         
                 String playerInfo = playerOne.toString();
                 System.out.println(playerInfo);
-    
-        Location locationOne = new Location();
-        Location locationTwo = new Location();
-        Location locationThree = new Location();
-        
-            locationOne.setName("Treasure Island");
-            locationTwo.setName("Port Royal");
-            locationThree.setName("Shipboard");
                     
-                String locationInfo = locationOne.toString();
-                System.out.println("");
-                
-        OnTheSeaLevel onTheSeaLevel = new OnTheSeaLevel();
-                
-            onTheSeaLevel.description("");
-            onTheSeaLevel.travelTime("");
-            
-                String descriptionSea = description.toString();
-                System.out.println();
-                
-        Ship blackPearl = new Ship();
+        Location treasureIsland = new Location();
+        Location portRoyal = new Location();
+        Location shipboard = new Location();
         
-            blackPearl.totalTime("");
-            blackPearl.levelCompleted("");
+            treasureIsland.setLevelNameOne("Treasure Island");
+            portRoyal.setLevelNameTwo("Port Royal");
+            shipboard.setLevelNameThree("Shipboard");
             
-                String totalTime = ("");
-                System.out.println("");
+                String setLevelNameOne = treasureIsland.toString();
+                String setLevelNameTwo = portRoyal.toString();
+                String setLevelNameThree = shipboard.toString();
+                                
+        OnTheSeaLevel onTheSeaLevelInfo = new OnTheSeaLevel();
+                
+            onTheSeaLevelInfo.setDescription("");
+            onTheSeaLevelInfo.setTravelTime(13);
+            
+                String setDescription = onTheSeaLevelInfo.toString();
+                System.out.println(setDescription);
+                
+        Ship shipOne = new Ship();
         
-                String levelCompleted = ("");
-                System.out.println("");
-                
-        TreasureIslandLevel treasureIslandLevel = new TreasureIslandLevel();
+            shipOne.setShipName("Black Pearl");
+                    
+                String shipName = shipOne.toString();
+                System.out.println(shipName);
+               
+            
+        TreasureIslandLevel tiDescription = new TreasureIslandLevel();
+        TreasureIslandLevel tiTravelTime = new TreasureIslandLevel();
+        TreasureIslandLevel tiNoOfItems = new TreasureIslandLevel();
         
-            treasureIslandLevel.description("");
-            treasureIslandLevel.travelTime("");
-            treasureIslandLevel.noOfItems("");
+            tiDescription.setIslandDescription("...");
+            tiTravelTime.setTravelTime("...");
+            tiNoOfItems.setNoOfItems(0);
             
-                String descriptionIsland = description.toString();
+                String setIslandDescription = tiDescription.toString();
                 System.out.println();
                 
-                String time = travelTime("");
+                String setTravelTime = tiTravelTime.toString();
                 System.out.println();
                 
-                String collectedItems = noOfItems("");
+                String setNoOfItems = tiNoOfItems.toString();
                 System.out.println();
                 
-        Weapons weapons = new Weapons();
+        Weapons typeOne = new Weapons();
         
-            weapons.weaponType("");
-            weapons.weaponDescription("");
+            typeOne.setWeaponType("Sword");
             
-                String weaponType = weaponType("");
+                String weaponTypeOne = typeOne.toString();
                 System.out.println();
                 
-                String weaponDescription = weaponDescription ("");
-                System.out.println();
-            
+                
                 
             
         
@@ -110,6 +107,10 @@ public class PiratesCaribbean {
     }
 
     private static String weaponType(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static String tiTravelTime(String string) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

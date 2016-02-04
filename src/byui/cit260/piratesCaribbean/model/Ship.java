@@ -21,9 +21,7 @@ public class Ship  implements Serializable{
     public Ship() {
     }
 
-    Ship(String the_Black_Pearl) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
         
     public String getDescription() {
@@ -97,6 +95,14 @@ public class Ship  implements Serializable{
     }
 
     void levelCompleted(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void shipName(String black_Pearl) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public String toString(String string) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

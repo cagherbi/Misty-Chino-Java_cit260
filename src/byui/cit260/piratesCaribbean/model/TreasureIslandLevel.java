@@ -14,7 +14,7 @@ import java.util.Objects;
  */
 public class TreasureIslandLevel  implements Serializable{
     
-    private String description;
+    private String islandDescription;
     private String travelTime;
     private double noOfItems;
 
@@ -23,12 +23,12 @@ public class TreasureIslandLevel  implements Serializable{
     
     
 
-    public String getDescription() {
-        return description;
+    public String getIslandDescription() {
+        return islandDescription;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setIslandDescription(String description) {
+        this.islandDescription = islandDescription;
     }
 
     public String getTravelTime() {
@@ -50,7 +50,7 @@ public class TreasureIslandLevel  implements Serializable{
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 43 * hash + Objects.hashCode(this.description);
+        hash = 43 * hash + Objects.hashCode(this.islandDescription);
         hash = 43 * hash + Objects.hashCode(this.travelTime);
         hash = 43 * hash + (int) (Double.doubleToLongBits(this.noOfItems) ^ (Double.doubleToLongBits(this.noOfItems) >>> 32));
         return hash;
@@ -71,7 +71,7 @@ public class TreasureIslandLevel  implements Serializable{
         if (Double.doubleToLongBits(this.noOfItems) != Double.doubleToLongBits(other.noOfItems)) {
             return false;
         }
-        if (!Objects.equals(this.description, other.description)) {
+        if (!Objects.equals(this.islandDescription, other.islandDescription)) {
             return false;
         }
         if (!Objects.equals(this.travelTime, other.travelTime)) {
@@ -82,7 +82,7 @@ public class TreasureIslandLevel  implements Serializable{
 
     @Override
     public String toString() {
-        return "TreasureIslandLevel{" + "description=" + description + ", travelTime=" + travelTime + ", noOfItems=" + noOfItems + '}';
+        return "TreasureIslandLevel{" + "IslandDescription=" + islandDescription + ", travelTime=" + travelTime + ", noOfItems=" + noOfItems + '}';
     }
 
     void description(String string) {
@@ -94,6 +94,38 @@ public class TreasureIslandLevel  implements Serializable{
     }
 
     void noOfItems(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void getDescription(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void getTravelTime(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void getNoOfItems(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setNoOfItems(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setNoOfItems() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setTravelTime() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setDescription() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setIslandDescription() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
