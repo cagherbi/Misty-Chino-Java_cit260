@@ -9,6 +9,7 @@ import byui.cit260.piratesCaribbean.model.Location;
 import byui.cit260.piratesCaribbean.model.OnTheSeaLevel;
 import byui.cit260.piratesCaribbean.model.Player;
 import byui.cit260.piratesCaribbean.model.Ship;
+import byui.cit260.piratesCaribbean.model.Supply;
 import byui.cit260.piratesCaribbean.model.TreasureIslandLevel;
 import byui.cit260.piratesCaribbean.model.Weapons;
 
@@ -82,8 +83,30 @@ public class PiratesCaribbean {
                 String weaponTypeOne = typeOne.toString();
                 System.out.println();
                 
+        Supply foodType = new Supply();       
+        Supply drinkType = new Supply();
+        Supply weaponType = new Supply();
+        Supply toolType = new Supply();
+         
+            foodType.setFoodType("...");
+            drinkType.setDrinkType("...");
+            weaponType.setWeaponType("...");
+            toolType.setToolType("...");
+          
+                String setFoodType = foodType.toString();
+                System.out.println();
+                
+                String setDrinkType = drinkType.toString();
+                System.out.println();
+                
+                String setWeaponType = weaponType.toString();
+                System.out.println();
+                
+                String settoolType = toolType.toString();
+                System.out.println();
                 
                 
+                       
             
         
                     
