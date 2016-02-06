@@ -6,12 +6,14 @@
 package piratescaribbean;
 
 import byui.cit260.piratesCaribbean.model.Location;
+import byui.cit260.piratesCaribbean.model.MapIslands;
 import byui.cit260.piratesCaribbean.model.OnTheSeaLevel;
 import byui.cit260.piratesCaribbean.model.Player;
 import byui.cit260.piratesCaribbean.model.Ship;
 import byui.cit260.piratesCaribbean.model.Supply;
 import byui.cit260.piratesCaribbean.model.TreasureIslandLevel;
 import byui.cit260.piratesCaribbean.model.Weapons;
+import java.util.Map;
 
 /**
  *
@@ -105,7 +107,44 @@ public class PiratesCaribbean {
                 String settoolType = toolType.toString();
                 System.out.println();
                 
-                
+        MapIslands headed = new MapIslands();
+        MapIslands directionNorth = new MapIslands();
+        MapIslands directionSouth = new MapIslands();
+        MapIslands directionEast = new MapIslands();
+        MapIslands directionwest = new MapIslands();
+        
+        
+            headed.setMapIsalands("...");
+            directionNorth.setDirectionNorth("...");
+            directionSouth.setDirectionSouth("...");
+            directionEast.setDirectionEast("...");
+            directionwest.setDirectionWest("...");
+            
+               String setMapIslands = headed.toString();
+               System.out.println();
+               
+               String setDirectionNorth = directionNorth.toString();
+               System.out.println();
+               
+               String setDirectionSouth = directionSouth.toString();
+               System.out.println();
+               
+               String setDirectionEast = directionEast.toString();
+               System.out.println();
+               
+               String setDirectionWest = directionwest.toString();
+               System.out.println();
+               
+               
+            
+            
+            
+            
+         
+        
+         
+         
+         
                        
             
         
