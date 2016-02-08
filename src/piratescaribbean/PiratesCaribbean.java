@@ -5,6 +5,7 @@
  */
 package piratescaribbean;
 
+import byui.cit260.piratesCaribbean.model.Actor;
 import byui.cit260.piratesCaribbean.model.Game;
 import byui.cit260.piratesCaribbean.model.Navigation;
 import byui.cit260.piratesCaribbean.model.Location;
@@ -167,9 +168,17 @@ public class PiratesCaribbean {
                 System.out.println(playerInfo);  
             
         
+        Actor actorName = new Actor();
+        Actor actorDescription = new Actor();
+        
+            actorName.setName("...");
+           actorDescription.setDescription("...");
+        
+                String actorInfo = actorName.toString();
+                System.out.println(actorName);          
                 
-                
-                
+                String descriptionInfo = actorDescription.toString();
+                System.out.println(actorDescription);
                 
                     
         
