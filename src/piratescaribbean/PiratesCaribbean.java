@@ -5,6 +5,8 @@
  */
 package piratescaribbean;
 
+import byui.cit260.piratesCaribbean.model.Game;
+import byui.cit260.piratesCaribbean.model.Navigation;
 import byui.cit260.piratesCaribbean.model.Location;
 import byui.cit260.piratesCaribbean.model.MapIslands;
 import byui.cit260.piratesCaribbean.model.OnTheSeaLevel;
@@ -137,7 +139,7 @@ public class PiratesCaribbean {
                
                
             
-          PortRoyal onThePortRoyalLevelInfo = new PortRoyal();
+        PortRoyal onThePortRoyalLevelInfo = new PortRoyal();
                 
            onThePortRoyalLevelInfo.setDescription("");
            onThePortRoyalLevelInfo.setTravelTime("...");
@@ -146,13 +148,29 @@ public class PiratesCaribbean {
                 System.out.println(setDescription);
             
 
-         
+        Navigation navType = new Navigation();
+        
+            navType.setNavigationType("compass");
+            
+                String naviagationTypeOne = navType.toString();
+                System.out.println(); 
+                
         
                     
         
-                       
+        Game gameOne = new Game();
+        
+            gameOne.setName("...");
+            gameOne.setBestTime(3.00);
+        
+                String gameInfo = gameOne.toString();
+                System.out.println(playerInfo);  
             
         
+                
+                
+                
+                
                     
         
     }

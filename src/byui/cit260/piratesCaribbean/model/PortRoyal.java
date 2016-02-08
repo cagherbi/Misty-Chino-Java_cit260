@@ -10,7 +10,7 @@ import java.util.Objects;
 
 /**
  *
- * @author Blazzard
+ * @author chino
  */
 public class PortRoyal  implements Serializable{
    
