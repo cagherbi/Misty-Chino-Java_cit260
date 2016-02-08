@@ -10,15 +10,16 @@ import java.util.Objects;
 
 /**
  *
- * @author Misty
+ * @author Blazzard
  */
-public class OnTheSeaLevel implements Serializable{
-    
-    
-private String description;
-private double travelTime;
-
+public class PortRoyal  implements Serializable{
    
+     private String description;
+     private double travelTime;
+
+    public PortRoyal() {
+    }
+
     public String getDescription() {
         return description;
     }
@@ -37,10 +38,15 @@ private double travelTime;
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 83 * hash + Objects.hashCode(this.description);
-        hash = 83 * hash + (int) (Double.doubleToLongBits(this.travelTime) ^ (Double.doubleToLongBits(this.travelTime) >>> 32));
+        int hash = 3;
+        hash = 37 * hash + Objects.hashCode(this.description);
+        hash = 37 * hash + (int) (Double.doubleToLongBits(this.travelTime) ^ (Double.doubleToLongBits(this.travelTime) >>> 32));
         return hash;
+    }
+
+    @Override
+    public String toString() {
+        return "PortRoyal{" + "description=" + description + ", travelTime=" + travelTime + '}';
     }
 
     @Override
@@ -54,7 +60,7 @@ private double travelTime;
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final OnTheSeaLevel other = (OnTheSeaLevel) obj;
+        final PortRoyal other = (PortRoyal) obj;
         if (Double.doubleToLongBits(this.travelTime) != Double.doubleToLongBits(other.travelTime)) {
             return false;
         }
@@ -64,23 +70,8 @@ private double travelTime;
         return true;
     }
 
-    @Override
-    public String toString() {
-        return "OnTheSeaLevel{" + "description=" + description + ", travelTime=" + travelTime + '}';
-    }
-
-    void description(String string) {
+    public void setTravelTime(String string) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    void travelTime(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setTravelTime() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    
-    
+     
 }

@@ -9,11 +9,11 @@ import byui.cit260.piratesCaribbean.model.Location;
 import byui.cit260.piratesCaribbean.model.MapIslands;
 import byui.cit260.piratesCaribbean.model.OnTheSeaLevel;
 import byui.cit260.piratesCaribbean.model.Player;
+import byui.cit260.piratesCaribbean.model.PortRoyal;
 import byui.cit260.piratesCaribbean.model.Ship;
 import byui.cit260.piratesCaribbean.model.Supply;
 import byui.cit260.piratesCaribbean.model.TreasureIslandLevel;
 import byui.cit260.piratesCaribbean.model.Weapons;
-import java.util.Map;
 
 /**
  *
@@ -104,7 +104,7 @@ public class PiratesCaribbean {
                 String setWeaponType = weaponType.toString();
                 System.out.println();
                 
-                String settoolType = toolType.toString();
+                String setToolType = toolType.toString();
                 System.out.println();
                 
         MapIslands headed = new MapIslands();
@@ -121,30 +121,35 @@ public class PiratesCaribbean {
             directionwest.setDirectionWest("...");
             
                String setMapIslands = headed.toString();
-               System.out.println();
+               System.out.println(setDescription);
                
                String setDirectionNorth = directionNorth.toString();
-               System.out.println();
+               System.out.println(setDescription);
                
                String setDirectionSouth = directionSouth.toString();
-               System.out.println();
+               System.out.println(setDescription);
                
                String setDirectionEast = directionEast.toString();
-               System.out.println();
+               System.out.println(setDescription);
                
                String setDirectionWest = directionwest.toString();
-               System.out.println();
+               System.out.println(setDescription);
                
                
             
+          PortRoyal onThePortRoyalLevelInfo = new PortRoyal();
+                
+           onThePortRoyalLevelInfo.setDescription("");
+           onThePortRoyalLevelInfo.setTravelTime("...");
             
+                String setdescription = onThePortRoyalLevelInfo.toString();
+                System.out.println(setDescription);
             
-            
+
          
         
-         
-         
-         
+                    
+        
                        
             
         
