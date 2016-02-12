@@ -19,6 +19,9 @@ public class Supply implements Serializable {
     private String drinkType;
     private String weaponType;
     private String toolType;
+    private double supplyKit;
+    private double timeTraveled;
+    private double crewBoarded;
 
     public Supply() {
     }
@@ -55,19 +58,46 @@ public class Supply implements Serializable {
         this.toolType = toolType;
     }
 
+    public double getSupplyKit() {
+        return supplyKit;
+    }
+
+    public void setSupplyKit(double supplyKit) {
+        this.supplyKit = supplyKit;
+    }
+
+    public double getTimeTraveled() {
+        return timeTraveled;
+    }
+
+    public void setTimeTraveled(double timeTraveled) {
+        this.timeTraveled = timeTraveled;
+    }
+
+    public double getCrewBoarded() {
+        return crewBoarded;
+    }
+
+    public void setCrewBoarded(double crewBoarded) {
+        this.crewBoarded = crewBoarded;
+    }
+
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 73 * hash + Objects.hashCode(this.foodType);
-        hash = 73 * hash + Objects.hashCode(this.drinkType);
-        hash = 73 * hash + Objects.hashCode(this.weaponType);
-        hash = 73 * hash + Objects.hashCode(this.toolType);
+        hash = 71 * hash + Objects.hashCode(this.foodType);
+        hash = 71 * hash + Objects.hashCode(this.drinkType);
+        hash = 71 * hash + Objects.hashCode(this.weaponType);
+        hash = 71 * hash + Objects.hashCode(this.toolType);
+        hash = 71 * hash + (int) (Double.doubleToLongBits(this.supplyKit) ^ (Double.doubleToLongBits(this.supplyKit) >>> 32));
+        hash = 71 * hash + (int) (Double.doubleToLongBits(this.timeTraveled) ^ (Double.doubleToLongBits(this.timeTraveled) >>> 32));
+        hash = 71 * hash + (int) (Double.doubleToLongBits(this.crewBoarded) ^ (Double.doubleToLongBits(this.crewBoarded) >>> 32));
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Supply{" + "foodType=" + foodType + ", drinkType=" + drinkType + ", weaponType=" + weaponType + ", toolType=" + toolType + '}';
+        return "Supply{" + "foodType=" + foodType + ", drinkType=" + drinkType + ", weaponType=" + weaponType + ", toolType=" + toolType + ", supplyKit=" + supplyKit + ", timeTraveled=" + timeTraveled + ", crewBoarded=" + crewBoarded + '}';
     }
 
     @Override
@@ -82,6 +112,15 @@ public class Supply implements Serializable {
             return false;
         }
         final Supply other = (Supply) obj;
+        if (Double.doubleToLongBits(this.supplyKit) != Double.doubleToLongBits(other.supplyKit)) {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.timeTraveled) != Double.doubleToLongBits(other.timeTraveled)) {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.crewBoarded) != Double.doubleToLongBits(other.crewBoarded)) {
+            return false;
+        }
         if (!Objects.equals(this.foodType, other.foodType)) {
             return false;
         }
@@ -96,6 +135,10 @@ public class Supply implements Serializable {
         }
         return true;
     }
+
+    
+  
+    
     
     
     
