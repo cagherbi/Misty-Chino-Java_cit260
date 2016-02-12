@@ -14,11 +14,11 @@ public class LocationControl {
     public double calcDistance (double speedShip, double timeTraveled){
        
         if (speedShip > 10){
-         return -1;
+         return 1;
         }
     
-        if (speedShip < 0 || timeTraveled > 1){
-        return -1;
+        if (speedShip < 0 || timeTraveled < 1){
+        return 1;
         }
        
         double distance = speedShip * timeTraveled;
