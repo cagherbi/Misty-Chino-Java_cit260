@@ -7,9 +7,11 @@ package byui.cit260.piratesCarribean.control;
 
 /**
  *
- * @author admin
+ * @author Misty-chino
  */
 public class LocationControl {
+    
+    private double calcDistance;
     
     public double calcDistance (double speedShip, double timeTraveled){
        
@@ -22,7 +24,7 @@ public class LocationControl {
         }
        
         double distance = speedShip * timeTraveled;
-        return distance;
+        return calcDistance;
     }
 }
     

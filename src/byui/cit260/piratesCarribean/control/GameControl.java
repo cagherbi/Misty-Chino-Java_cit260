@@ -7,7 +7,7 @@ package byui.cit260.piratesCarribean.control;
 
 /**
  *
- * @author admin
+ * @author 
  */
 public class GameControl {
     
