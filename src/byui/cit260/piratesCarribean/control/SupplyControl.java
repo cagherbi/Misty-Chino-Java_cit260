@@ -16,11 +16,11 @@ public class SupplyControl {
     
     public double calcSupplies (double supplyKit, double crewBoarded, double timeTraveled){
         
-        if (supplyKit > 9 || supplyKit <= 15) {
+        if (supplyKit > 9 || supplyKit <= 15){
         return 1;
          }
         
-        if (crewBoarded < 4 || timeTraveled > 3) { 
+        if (crewBoarded < 4 || timeTraveled > 3){ 
         return 1;
          }       
         

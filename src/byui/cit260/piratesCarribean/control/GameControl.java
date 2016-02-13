@@ -7,8 +7,22 @@ package byui.cit260.piratesCarribean.control;
 
 /**
  *
- * @author 
+ * @ chino 
  */
 public class GameControl {
+    
+    private double calcBestTime;
+    
+     public double calcBestTime (double levelCompleted, double totalTime){
+     
+     if (levelCompleted > 2){
+        return 1;
+     }              
+     if (levelCompleted < 0 && totalTime > 1){
+         return 1; 
+     }
+     double bestTime = levelCompleted / totalTime;
+        return calcBestTime;
+     }
     
 }
