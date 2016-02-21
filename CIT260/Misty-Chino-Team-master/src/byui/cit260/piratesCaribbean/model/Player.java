@@ -13,6 +13,10 @@ import java.util.Objects;
  * @author Misty
  */
 public class Player implements Serializable{
+
+    public static void setPlayer(Player player) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     //class instance variables
     private String name;
@@ -76,6 +80,10 @@ public class Player implements Serializable{
     }
 
     public void setBestTime() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setName(Object name) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
