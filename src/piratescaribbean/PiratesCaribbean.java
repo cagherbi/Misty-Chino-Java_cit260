@@ -8,7 +8,7 @@ package piratescaribbean;
 
 import byui.cit260.piratesCaribbean.model.Game;
 import byui.cit260.piratesCaribbean.model.Player;
-import citbyui.cit260.piratesCaribbean.view.StartProgramView;
+import byui.cit260.piratesCarribean.view.StartProgramView;
 
 /**
  *
