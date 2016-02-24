@@ -76,7 +76,7 @@ public class MainMenuView {
     }
     
     private void startNewGame() {
-        GameControl.createNewGame(PiratesCaribbean.getPlayer());
+        GameControl.createNewGame();
     }
     
     private void startExistingGame() {
