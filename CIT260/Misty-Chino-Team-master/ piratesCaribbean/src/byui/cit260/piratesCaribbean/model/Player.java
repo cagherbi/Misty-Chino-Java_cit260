@@ -70,14 +70,6 @@ public class Player implements Serializable{
     public String toString() {
         return "Player{" + "name=" + name + ", bestTime=" + bestTime + '}';
     }
-
-    void setBestTime(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setBestTime() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
     
         
