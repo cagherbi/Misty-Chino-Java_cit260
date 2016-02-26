@@ -89,10 +89,7 @@ public class HelpMenuView {
         System.out.println("*** Islands Location function called ***");
     }
 
-  
-
-    
-    private void displayHelpMenuView (Game game){
+    private void displayHelpMenuView(Game game) {
         System.out.println("\n================================="
                 + "\n Welcome to the  " + game.getName()
                 + "\n We hope you have a lot of fun!"
