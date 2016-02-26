@@ -20,6 +20,10 @@ public class GameControl {
     public static void createNewGame() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    public static void showGameInfo() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     private double calcBestTime;
     private double getPlayer;
