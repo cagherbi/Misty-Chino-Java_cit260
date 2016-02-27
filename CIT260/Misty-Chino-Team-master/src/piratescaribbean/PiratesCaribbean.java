@@ -8,7 +8,6 @@ package piratescaribbean;
 
 import byui.cit260.piratesCaribbean.model.Game;
 import byui.cit260.piratesCaribbean.model.Player;
-import citbyui.cit260.piratesCaribbean.view.StartProgramView;
 
 /**
  *
@@ -29,20 +28,7 @@ public class PiratesCaribbean {
     
     
      
-    public static void main(String[] args) {
-        
-        // create StartProgramViewOrig and display the start program view
-        StartProgramView startProgramView = new StartProgramView();
-        startProgramView.displayStartProgramView();
-    }
-
-    public static void setPlayer(Player player) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public static Player getPlayer() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
     
     

@@ -1,0 +1,78 @@
+@charset "utf-8";
+@media screen and (orientation: portrait) {
+  img.ri { max-width: 90%; }
+}
+@media screen and (orientation: landscape) {
+  img.ri { max-height: 90%; }
+}
+     body{
+          margin: 0 auto;
+          width: 90%;
+          font-family: Helvetica, Verdana, sans-serif;
+          background-color: #504943; 
+            
+     }
+     header{
+          margin: 5px 0;
+          height: 150px;
+          padding: 10px;
+     }
+    main{
+           display: block;
+           position: inherit;
+           margin: 5px 0;
+           background-image: url("/triathlon/images/concrete1.jpg");
+           padding: 30px 0;
+           height: auto;
+           border: solid #000;
+           overflow: auto;
+           text-align: left;
+           color: #000;
+           
+      }
+      h1{
+           font-family: Helvetica, Verdana, sans-serif;
+           font-size: 24pt;
+           color: #d86717;
+           text-align: center;
+           text-shadow: 2px 2px #504943;
+      }
+      p{
+           padding: 5px;
+           font-family: Century, Times Roman, serif;
+           font-size: 16pt;
+           color: #000;
+           font-weight: 600;
+       
+      }
+      img{
+           float: inside; 
+           padding: 25px;
+           alignment-adjust: center;
+           width: 75%;
+      }
+      img.displayed{
+           display: block;
+           margin-left: auto;
+           margin-right: auto;
+      }
+      #wrapper label{
+           vertical-align: top;
+      }
+      footer {
+           padding: 5px 0;
+           height: 50px;
+           font-family: Helvetica, Verdana, sans-serif;
+           font-size: 14px;
+           text-shadow: 2px 2px #504943;
+           text-align: center
+           }
+      footer a{
+           color: #d86717;
+           }
+                
+/* 
+    Created on : Dec 5, 2014, 3:06:27 PM
+    Author     : Misty Darrington
+*/
+

@@ -60,13 +60,13 @@ public class MainMenuView {
                 this.startNewGame();
                 break;
             case "G":
-                this.startNewGame();
+                this.startExistingGame();
                 break;
             case "H":
-                this.startNewGame();
+                this.displayHelpMenu();
                 break;
             case "S":
-                this.startNewGame();
+                this.saveGame();
                 break;
             default:
                 System.out.println("\n*** Invalid selection *** Try again");

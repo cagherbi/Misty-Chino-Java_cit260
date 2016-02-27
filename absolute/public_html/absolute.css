@@ -1,0 +1,61 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#outer {
+    margin: 5em;
+    border: 1px solid #f00;
+    height: 8em;
+    position: relative;
+}
+
+#inner {
+    width: 5em;
+    height: 5em;
+    background-color: #999;
+    position: fixed;
+    top: 1em;
+    left: 1em;
+}
+
+#second {
+    width: 5em;
+    height: 150em;
+    background-color: #00f;
+    position: absolute;
+    top: 1em;
+    left: 2em;
+}
+
+span {
+    position: absolute;
+    top: 2em;
+    left: 2em;
+    width: 3em;
+    height: 3em;
+}
+
+#inner span {
+    background-color: #ff0;
+}
+
+#second span {
+    background-color: #0ff;
+    z-index: 3;
+}
+
+
+
+
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 22, 2014, 2:29:01 PM
+    Author     : Misty
+*/
+
