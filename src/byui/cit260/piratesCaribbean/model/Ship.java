@@ -12,8 +12,8 @@ import java.util.Objects;
  *
  * @author Misty
  */
-public class Ship  implements Serializable{
-    
+public class Ship implements Serializable {
+
     private String description;
     private String shipType;
     private String shipName;
@@ -21,9 +21,6 @@ public class Ship  implements Serializable{
     public Ship() {
     }
 
-    
-
-        
     public String getDescription() {
         return description;
     }
@@ -105,8 +102,5 @@ public class Ship  implements Serializable{
     public String toString(String string) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
-    
-    
+
 }
