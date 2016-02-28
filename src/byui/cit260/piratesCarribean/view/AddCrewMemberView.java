@@ -6,14 +6,11 @@ import java.util.Scanner;
  */
 class AddCrewMemberView {
     public void chooseCrew(String args[]) {
-        System.out.println("Select your crew. You need a you plus 3 more in order to set sail.");
+        Scanner input= new Scanner(System.in);
+        System.out.println("Now, select your crew. You need 3, plus yourself, in order to set sail.");
     }
         public void doAction (char choice){
-     
             choice = Character.toUpperCase(choice);
-            
-            Scanner input= new Scanner(System.in);
-
                 switch (choice) {
                     case 'J':
                         this.addJackSparrow();
@@ -37,7 +34,7 @@ class AddCrewMemberView {
                         this.addTiaDalma();
                         break;
                     case 'B':
-                        this.addBlackbead();
+                        this.addBlackbeard();
                         break;
                     case 'A':
                         this.addAngelica();
@@ -46,41 +43,39 @@ class AddCrewMemberView {
                         System.out.println("\n*** Invalid Selection - Try Again ***");
                 }
         }
-
         private void addJackSparrow() {
-            System.out.println("Jack Sparrow added to crew");
+            System.out.println("Jack Sparrow is on board.");
         }
 
         private void addHectorBarbossa() {
-            System.out.println("Hector Barbossa added to crew");
+            System.out.println("Hector Barbossa is on board.");
         }
 
         private void addDavyJones() {
-            System.out.println("Davy Jones added to crew");
+            System.out.println("Davy Jones is on board.");
         }
 
         private void addJoshuaGibbs() {
-            System.out.println("Joshua Gibbs added to crew");
+            System.out.println("Joshua Gibbs is on board.");
         }
 
         private void addWillTurner() {
-            System.out.println("Will Turner added to crew");
+            System.out.println("Will Turner is on board.");
         }
 
         private void addElizabethSwan() {
-            System.out.println("Elizabeth Swan added to crew");
+            System.out.println("Elizabeth Swan is on board.");
         }
 
         private void addTiaDalma() {
-            System.out.println("Tia Dalma added to crew");
+            System.out.println("Tia Dalma is on board.");
         }
 
-        private void addBlackbead() {
-            System.out.println("Blackbeard added to crew");
+        private void addBlackbeard() {
+            System.out.println("Blackbeard is on board.");
         }
 
         private void addAngelica() {
-            System.out.println("Angelica added to crew");
+            System.out.println("Angelica is on board.");
         }
-             
-    }
+}
