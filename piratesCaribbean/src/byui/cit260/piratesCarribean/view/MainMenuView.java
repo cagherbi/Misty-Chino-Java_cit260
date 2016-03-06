@@ -3,23 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.piratesCaribbean.view;
+package byui.cit260.piratesCarribean.view;
 
 import byui.cit260.piratesCaribbean.model.Player;
 import byui.cit260.piratesCarribean.control.GameControl;
-import piratescaribbean.PiratesCaribbean;
+import byui.cit260.piratesCarribean.view.InterfaceView.View;
 
 /**
  *
  * @author Misty
  */
-public class MainMenuView {
-    
-    private String menu;
-    Object mainMenuView;
-    
-    public MainMenuView() {
-        this.menu = "\n"
+    public class MainMenuView extends View {
+       
+        public MainMenuView() {
+           
+               super("\n"
                 + "\n-----------------------------------------------"
                 + "\n| Main Menu                                   |"
                 + "\n-----------------------------------------------"
@@ -28,55 +26,11 @@ public class MainMenuView {
                 + "\nH - Get Help and How to Play the Game"
                 + "\nS - Save Game"
                 + "\nQ - Quit"
-                + "\n-----------------------------------------------";
-    }
-    
-    public void displayMainMenuView() {
-        
-        boolean done = false; 
-        do {
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q"))
-                return;
-            done = this.doAction(menuOption);
-            
-        }while (!done);
-    }
-    
-    private String getMenuOption() {
-        System.out.println("\n*** getMenuOption() function called ***");
-        return "N";
-        
-    }
-
- 
-
-    public boolean doAction(String choice) {
-        
-        choice = choice.toUpperCase();
-        
-        switch (choice) {
-            case "N":
-                this.startNewGame();
-                break;
-            case "G":
-                this.startNewGame();
-                break;
-            case "H":
-                this.startNewGame();
-                break;
-            case "S":
-                this.startNewGame();
-                break;
-            default:
-                System.out.println("\n*** Invalid selection *** Try again");
-                break;
-        }
-        return false;
+                + "\n-----------------------------------------------");
     }
     
     private void startNewGame() {
-        GameControl.createNewGame(PiratesCaribbean.getPlayer());
+        GameControl.createNewGame();
     }
     
     private void startExistingGame() {
@@ -102,7 +56,29 @@ private void displayNextView(Player player){
 
         MainMenuView mainMenuView = new MainMenuView();
         
-        mainMenuView.displayMainMenuView();
+        mainMenuView.displayMenu();
 
     }
-}
+
+        @Override
+    public void display() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+        @Override
+    public String getInput() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+        @Override
+    public boolean doAction(String value) {
+        value = value.toUpperCase();
+        return false;
+    }
+
+    private void displayMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
+    }

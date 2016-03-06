@@ -6,7 +6,6 @@
 package byui.cit260.piratesCarribean.control;
 
 import byui.cit260.piratesCaribbean.model.Player;
-import piratescaribbean.PiratesCaribbean;
 
 /**
  *
@@ -14,26 +13,25 @@ import piratescaribbean.PiratesCaribbean;
  */
 public class GameControl {
 
-    public static void createNewGame(Player player) {
-          System.out.println("\n*** createNewGame stub function called ***");
-    }
-    
-    private static Object name;
-
     public static Player createPlayer(String playersName) {
-        if (name == null) {
-            return null;
-        }
-        
-        Player player = new Player();
-        player.setName(name);
-    
-        PiratesCaribbean.setPlayer(player); 
-        
-        return player;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-        
+
+    public static void createNewGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public static void showGameInfo() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
     private double calcBestTime;
+    private double getPlayer;
+
+    @Override
+    public String toString() {
+        return "GameControl{" + "calcBestTime=" + calcBestTime + ", getPlayer=" + getPlayer + '}';
+    }
     
      public double calcBestTime (double levelCompleted, double totalTime){
      
@@ -46,6 +44,5 @@ public class GameControl {
      double bestTime = levelCompleted / totalTime;
         return calcBestTime;
      }
-     
-     
+    
 }

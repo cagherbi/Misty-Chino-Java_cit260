@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.piratesCaribbean.view;
+package byui.cit260.piratesCarribean.view;
 
 import byui.cit260.piratesCaribbean.model.Player;
 import byui.cit260.piratesCarribean.control.GameControl;
@@ -105,29 +105,10 @@ public final class StartProgramView {
             System.out.println("\nError creating the player.");
             return false;
         }
-        
-    /**
-     *
-     * @param player
-     */
-
-    /**
-     *
-     * @param player
-     */
-    private void displayNextView(Player player) {
-             System.out.println("\n========================================"
-                               + "\n Welcome to the game " + player.getName()
-                               + "\n We hope you have a lot of fun!"
-                               + "\n ====================================="
-                               );
-        MainMenuView.mainMenuView = new MainMenuView();
-                     
-        mainMenuView.displayMainMenuView();
-   
+     return true;
     }
+    
 }
-
 
 
     
