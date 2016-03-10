@@ -7,6 +7,7 @@ package byui.cit260.piratesCarribean.view;
 
 import byui.cit260.piratesCaribbean.model.Game;
 import byui.cit260.piratesCarribean.control.GameControl;
+import java.io.InputStream;
 
 /**
  *
@@ -16,6 +17,7 @@ public class HelpMenuView {
 
     private String menu;
     Object HelpMenuView;
+    private Scanner New;
 
     public HelpMenuView() {
         this.menu = "\n"
@@ -42,14 +44,43 @@ public class HelpMenuView {
 
         } while (!done);
     }
+  public String getInput(){ 
 
-    private String getMenuOption() {
-        System.out.println("\n*** getMenuOption() function called ***");
-        return "N";
+    Scanner keyboard = New Scanner(System.in);
+    boolean valid = false;
+    String  value = null;
 
+    while (!valid){
+        System.out.println("\n"+ this.displayMessage);
+
+        value = keyboard.nextLine();
+        value = value.trim();
+        
+        if (value.lengh() < 1) {
+             System.out.println("\n*** You must enter a value ***");
+             continue;
+        }
+        break;
+    }
+    return value;
     }
 
-    public boolean doAction(String choice) {
+    private String getMenuOption() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void Scanner(InputStream in) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static class Scanner {
+
+        public Scanner() {
+        }
+    }
+    }
+
+    public boolean doAction(String value) {
 
         choice = choice.toUpperCase();
 
@@ -103,6 +134,10 @@ public class HelpMenuView {
     }
 
     private void ShowGameDesciption() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private String getMenuOption() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

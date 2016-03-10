@@ -7,19 +7,14 @@ package byui.cit260.piratesCarribean.view;
 
 import byui.cit260.piratesCaribbean.model.Player;
 import byui.cit260.piratesCarribean.control.GameControl;
-import piratescaribbean.PiratesCaribbean;
 
 /**
  *
  * @author Misty
  */
-public class MainMenuView {
-    
-    private String menu;
-    Object mainMenuView;
-    
-    public MainMenuView() {
-        this.menu = "\n"
+public class MainMenuView extends View {
+public MainMenuView(){ 
+      super("\n"
                 + "\n-----------------------------------------------"
                 + "\n| Main Menu                                   |"
                 + "\n-----------------------------------------------"
@@ -28,34 +23,15 @@ public class MainMenuView {
                 + "\nH - Get Help and How to Play the Game"
                 + "\nS - Save Game"
                 + "\nQ - Quit"
-                + "\n-----------------------------------------------";
-    }
-    
-    public void displayMainMenuView() {
-        
-        boolean done = false; 
-        do {
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q"))
-                return;
-            done = this.doAction(menuOption);
-            
-        }while (!done);
-    }
-    
-    private String getMenuOption() {
-        System.out.println("\n*** getMenuOption() function called ***");
-        return "N";
-        
-    }
+                + "\n-----------------------------------------------");
+}
+@Override
 
- 
+    public boolean doAction(String value) {
 
-    public boolean doAction(String choice) {
-        
-        choice = choice.toUpperCase();
-        
-        switch (choice) {
+        value = value.toUpperCase();
+
+        switch (value) {
             case "N":
                 this.startNewGame();
                 break;
@@ -74,35 +50,33 @@ public class MainMenuView {
         }
         return false;
     }
-    
+
     private void startNewGame() {
         GameControl.createNewGame();
     }
-    
+
     private void startExistingGame() {
         System.out.println("*** startExistingGame function called ***");
     }
-    
+
     private void saveGame() {
         System.out.println("*** saveGame function called ***");
     }
-    
+
     private void displayHelpMenu() {
         System.out.println("*** displayHelpMenu function called ***");
     }
-    
-    
-        
-private void displayNextView(Player player){
+
+    private void displayNextView(Player player) {
         System.out.println("\n================================="
-                          + "\n Welcome to the game " + player.getName()
-                          + "\n We hope you have a lot of fun!"
-                          + "\n================================"
-                           );
+                + "\n Welcome to the game " + player.getName()
+                + "\n We hope you have a lot of fun!"
+                + "\n================================"
+        );
 
         MainMenuView mainMenuView = new MainMenuView();
-        
-        mainMenuView.displayMainMenuView();
+
+        mainMenuView.display();
 
     }
 }
