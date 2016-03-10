@@ -10,7 +10,7 @@ import byui.cit260.piratesCarribean.control.GameControl;
 
 /**
  *
- * @author chino
+ * @author chino 
  */
 public class HelpMenuView {
 
