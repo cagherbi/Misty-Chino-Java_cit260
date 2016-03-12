@@ -19,6 +19,8 @@ public class Location implements Serializable {
     private String levelNameOne;
     private String levelNameTwo;
     private String levelNameThree;
+    private Scene scene;
+    private ArrayList<Actor> actors;
   
 
     public Location() {
