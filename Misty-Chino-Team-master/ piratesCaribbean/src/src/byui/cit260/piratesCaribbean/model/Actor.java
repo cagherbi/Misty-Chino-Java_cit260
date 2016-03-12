@@ -1,4 +1,4 @@
-package byui.cit260.piratesCaribbean.model;
+package src.byui.cit260.piratesCaribbean.model;
 
 
 import java.io.Serializable;

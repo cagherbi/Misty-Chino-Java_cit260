@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.piratesCarribean.view;
+package src.byui.cit260.piratesCarribean.view;
 
 /**
  *

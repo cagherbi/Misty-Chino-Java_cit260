@@ -3,10 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.piratesCarribean.view;
+package src.byui.cit260.piratesCarribean.view;
 
-import byui.cit260.piratesCaribbean.model.Game;
-import byui.cit260.piratesCarribean.control.GameControl;
 import java.io.InputStream;
 
 /**
@@ -73,9 +71,17 @@ public class HelpMenuView {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    private boolean doAction(String menuOption) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     private static class Scanner {
 
         public Scanner() {
+        }
+
+        private String nextLine() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
     }
     }
