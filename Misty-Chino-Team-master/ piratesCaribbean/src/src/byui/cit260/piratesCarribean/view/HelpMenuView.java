@@ -5,6 +5,8 @@
  */
 package src.byui.cit260.piratesCarribean.view;
 
+import byui.cit260.piratesCaribbean.model.Game;
+import byui.cit260.piratesCarribean.control.GameControl;
 import java.io.InputStream;
 
 /**
@@ -16,6 +18,7 @@ public class HelpMenuView {
     private String menu;
     Object HelpMenuView;
     private Scanner New;
+    private String displayMessage;
 
     public HelpMenuView() {
         this.menu = "\n"
@@ -84,7 +87,7 @@ public class HelpMenuView {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
     }
-    }
+
 
     public boolean doAction(String value) {
 
@@ -142,9 +145,4 @@ public class HelpMenuView {
     private void ShowGameDesciption() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    private String getMenuOption() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
 }

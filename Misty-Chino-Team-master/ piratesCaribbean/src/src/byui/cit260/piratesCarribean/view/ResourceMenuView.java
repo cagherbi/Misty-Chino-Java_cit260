@@ -9,10 +9,6 @@ package src.byui.cit260.piratesCarribean.view;
  *
  * @author chino
  */
-public class ResourceMenuView {
-    
-    public void display();
-    public String getInput();
-    public boolean doAction(String Value);
+class ResourceMenuView {
     
 }

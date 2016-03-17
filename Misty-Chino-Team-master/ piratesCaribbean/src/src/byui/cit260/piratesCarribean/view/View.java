@@ -7,37 +7,8 @@ package src.byui.cit260.piratesCarribean.view;
 
 /**
  *
- * @author chino
+ * @author admin
  */
-public abstract class View extends ResourceMenuView {
+class View {
     
-    protected String displayMessage;
-    
-    public View() {
-    }
-    public View(String message){
-        this.displayMessage = message;
-    }
-    @Override
-    public void display() {
-    
-        boolean done = false;
-        do{
-            String value = this.getInput();
-            if (value.toUpperCase().equals("Q"))
-                return;
-            
-            done = this.doAction(value);
-        } while (!done);
-    }
-
-    @Override
-    public String getInput() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public boolean doAction(String value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

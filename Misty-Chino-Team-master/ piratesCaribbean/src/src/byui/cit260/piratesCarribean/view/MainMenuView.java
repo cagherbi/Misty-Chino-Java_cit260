@@ -25,8 +25,6 @@ public MainMenuView(){
                 + "\nQ - Quit"
                 + "\n-----------------------------------------------");
 }
-@Override
-
     public boolean doAction(String value) {
 
         value = value.toUpperCase();
@@ -78,5 +76,9 @@ public MainMenuView(){
 
         mainMenuView.display();
 
+    }
+
+    private void display() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
