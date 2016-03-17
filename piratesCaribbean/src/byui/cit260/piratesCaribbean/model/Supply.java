@@ -10,14 +10,29 @@ import java.util.Objects;
 
 /**
  *
- * @author Chino
+ * @author Chino and Misty
  */
 public enum Supply implements Serializable {
-    
-    
+       
     food,
     water,
     tools;
+
+    public void setFoodType(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setDrinkType(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setWeaponType(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setToolType(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
  
 }

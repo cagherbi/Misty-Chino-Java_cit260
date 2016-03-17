@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Misty
+ * @author Misty and Chino
  */
 public abstract class View implements ViewInterface {
     

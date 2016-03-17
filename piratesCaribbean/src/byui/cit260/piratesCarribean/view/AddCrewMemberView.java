@@ -2,7 +2,7 @@ package byui.cit260.piratesCarribean.view;
 import java.util.Scanner;
 /**
  *
- * @author Misty
+ * @author Misty and Chino
  */
 class AddCrewMemberView {
     public void chooseCrew(String args[]) {

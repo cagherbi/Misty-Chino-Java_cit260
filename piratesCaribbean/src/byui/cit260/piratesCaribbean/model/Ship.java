@@ -10,7 +10,7 @@ import java.util.Objects;
 
 /**
  *
- * @author Misty
+ * @author Misty and Chino
  */
 public class Ship implements Serializable {
 
