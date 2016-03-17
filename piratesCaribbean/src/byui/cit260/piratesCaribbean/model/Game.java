@@ -1,7 +1,9 @@
 package byui.cit260.piratesCaribbean.model;
 
 
+import byui.cit260.piratesCarribean.control.SupplyItem;
 import java.io.Serializable;
+import java.util.Map;
 import java.util.Objects;
 
 /*
@@ -16,8 +18,12 @@ import java.util.Objects;
  */
 public class Game implements Serializable{
     
-    private String name;
     private double bestTime;
+    
+    private Player player;
+    private Supply[] supply;
+    private Ship ship;
+    private Map map;
 
     public Game() {
     }
@@ -70,6 +76,42 @@ public class Game implements Serializable{
             return false;
         }
         return true;
+    }
+
+    public void setPlayer(Player player) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setSupply(Supply[] supplyList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setShip(Ship ship) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setSupply(Supply[] supplyList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setMap(Map map) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setSupply(SupplyItem[] supplyList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setSupplyItem(SupplyItem[] supplyItem) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setSupplysupply(SupplyItem[] supplyItem) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setSupply() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

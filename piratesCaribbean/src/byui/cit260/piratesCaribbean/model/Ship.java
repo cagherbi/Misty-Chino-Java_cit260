@@ -19,6 +19,9 @@ public class Ship implements Serializable {
     private String shipName;
 
     public Ship() {
+        this.description = "\nThis is the game of Pirate of the Caribean. If you have the grit, "
+                        + "\nyou might find the treasure and come back alive.";
+        
     }
 
     public String getDescription() {
