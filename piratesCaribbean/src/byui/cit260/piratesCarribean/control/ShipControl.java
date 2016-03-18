@@ -11,7 +11,7 @@ package byui.cit260.piratesCarribean.control;
  */
 public class ShipControl {
     
-    public double calcVoyageKits (double supplyKits, double crew){
+    public static int calcVoyageKits (double supplyKits, double crew){
        
         if (crew <= 4){
          return -1;
@@ -22,7 +22,8 @@ public class ShipControl {
         }
        
         double calcVoyageKits = supplyKits / crew;
-        return calcVoyageKits;
+        return 0;
+        
     }
 }
     
