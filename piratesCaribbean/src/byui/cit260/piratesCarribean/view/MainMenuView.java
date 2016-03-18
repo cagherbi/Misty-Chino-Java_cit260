@@ -5,7 +5,7 @@ import java.util.Scanner;
 import piratescaribbean.PiratesCaribbean;
 /**
  *
- * @author Misty
+ * @author Misty and Chino
  */
     public abstract class MainMenuView extends View {
         

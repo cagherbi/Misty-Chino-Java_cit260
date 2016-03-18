@@ -14,7 +14,7 @@ import java.util.Objects;
 
 /**
  *
- * @author chino
+ * @author chino and Misty
  */
 public class Game implements Serializable{
     
@@ -24,6 +24,7 @@ public class Game implements Serializable{
     private Supply[] supply;
     private Ship ship;
     private Map map;
+    private String name;
 
     public Game() {
     }
@@ -87,10 +88,6 @@ public class Game implements Serializable{
     }
 
     public void setShip(Ship ship) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setSupply(Supply[] supplyList) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

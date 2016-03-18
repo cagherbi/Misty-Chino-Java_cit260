@@ -9,7 +9,7 @@ package byui.cit260.piratesCarribean.control;
  *
  * @author Misty
  */
-class SupplyItem {
+public class SupplyItem {
 
     void setDescription(String food) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

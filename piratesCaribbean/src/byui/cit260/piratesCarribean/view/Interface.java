@@ -7,7 +7,7 @@ package byui.cit260.piratesCarribean.view;
 
 /**
  *
- * @author Misty
+ * @author Misty and Chino
  */
 public class Interface {
     

@@ -5,16 +5,12 @@
  */
 package piratescaribbean;
 
-import byui.cit260.piratesCaribbean.model.Actor;
 import byui.cit260.piratesCaribbean.model.Game;
-import byui.cit260.piratesCaribbean.model.Navigation;
 import byui.cit260.piratesCaribbean.model.Location;
-import byui.cit260.piratesCaribbean.model.MapIslands;
 import byui.cit260.piratesCaribbean.model.OnTheSeaLevel;
 import byui.cit260.piratesCaribbean.model.Player;
 import byui.cit260.piratesCaribbean.model.PortRoyal;
 import byui.cit260.piratesCaribbean.model.Ship;
-import byui.cit260.piratesCaribbean.model.Supply;
 import byui.cit260.piratesCaribbean.model.TreasureIslandLevel;
 import byui.cit260.piratesCaribbean.model.Weapons;
 
@@ -88,58 +84,7 @@ public class PiratesCaribbean {
                 String weaponTypeOne = typeOne.toString();
                 System.out.println();
                 
-        Supply foodType = new Supply();       
-        Supply drinkType = new Supply();
-        Supply weaponType = new Supply();
-        Supply toolType = new Supply();
-         
-            foodType.setFoodType("...");
-            drinkType.setDrinkType("...");
-            weaponType.setWeaponType("...");
-            toolType.setToolType("...");
-          
-                String setFoodType = foodType.toString();
-                System.out.println();
-                
-                String setDrinkType = drinkType.toString();
-                System.out.println();
-                
-                String setWeaponType = weaponType.toString();
-                System.out.println();
-                
-                String setToolType = toolType.toString();
-                System.out.println();
-                
-        MapIslands headed = new MapIslands();
-        MapIslands directionNorth = new MapIslands();
-        MapIslands directionSouth = new MapIslands();
-        MapIslands directionEast = new MapIslands();
-        MapIslands directionwest = new MapIslands();
         
-        
-            headed.setMapIsalands("...");
-            directionNorth.setDirectionNorth("...");
-            directionSouth.setDirectionSouth("...");
-            directionEast.setDirectionEast("...");
-            directionwest.setDirectionWest("...");
-            
-               String setMapIslands = headed.toString();
-               System.out.println(setDescription);
-               
-               String setDirectionNorth = directionNorth.toString();
-               System.out.println(setDescription);
-               
-               String setDirectionSouth = directionSouth.toString();
-               System.out.println(setDescription);
-               
-               String setDirectionEast = directionEast.toString();
-               System.out.println(setDescription);
-               
-               String setDirectionWest = directionwest.toString();
-               System.out.println(setDescription);
-               
-               
-            
         PortRoyal onThePortRoyalLevelInfo = new PortRoyal();
                 
            onThePortRoyalLevelInfo.setDescription("");
@@ -147,18 +92,7 @@ public class PiratesCaribbean {
             
                 String setdescription = onThePortRoyalLevelInfo.toString();
                 System.out.println(setDescription);
-            
-
-        Navigation navType = new Navigation();
-        
-            navType.setNavigationType("compass");
-            
-                String naviagationTypeOne = navType.toString();
-                System.out.println(); 
-                
-        
-                    
-        
+         
         Game gameOne = new Game();
         
             gameOne.setName("...");
@@ -166,23 +100,7 @@ public class PiratesCaribbean {
         
                 String gameInfo = gameOne.toString();
                 System.out.println(playerInfo);  
-            
-        
-        Actor actorName = new Actor();
-        Actor actorDescription = new Actor();
-        
-            actorName.setName("...");
-           actorDescription.setDescription("...");
-        
-                String actorInfo = actorName.toString();
-                System.out.println(actorName);          
-                
-                String descriptionInfo = actorDescription.toString();
-                System.out.println(actorDescription);
-                
-                    
-        
-    }
+}
 
     private static void levelCompleted(String string) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -212,7 +130,12 @@ public class PiratesCaribbean {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public static void setCurrentGame(Game game) {
+   
+    public static Game getCurrentGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public static Player getPlayer() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
