@@ -100,6 +100,15 @@ public class PiratesCaribbean {
         
                 String gameInfo = gameOne.toString();
                 System.out.println(playerInfo);  
+                
+        try {
+            // create gameOne and start the program
+            gameOne.display();
+        } catch (Throwable te) {
+            System.out.println(te.getMessage());
+            te.printStackTrace();
+            gameOne.display();
+        }
 }
 
     private static void levelCompleted(String string) {
