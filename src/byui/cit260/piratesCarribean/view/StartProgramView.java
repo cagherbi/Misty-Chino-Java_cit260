@@ -104,6 +104,7 @@ public final class StartProgramView {
         if (player == null) {
             System.out.println("\nError creating the player.");
             return false;
+           
         }
      return true;
     }

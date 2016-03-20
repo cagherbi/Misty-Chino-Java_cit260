@@ -7,6 +7,7 @@ package byui.cit260.piratesCarribean.view;
 
 import byui.cit260.piratesCaribbean.model.Player;
 import byui.cit260.piratesCarribean.control.GameControl;
+import static javax.management.Query.value;
 import piratescaribbean.PiratesCaribbean;
 
 /**
@@ -17,6 +18,7 @@ public class MainMenuView {
     
     private String menu;
     Object mainMenuView;
+    private String value;
     
     public MainMenuView() {
         this.menu = "\n"
@@ -71,6 +73,8 @@ public class MainMenuView {
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
+                
+                
         }
         return false;
     }

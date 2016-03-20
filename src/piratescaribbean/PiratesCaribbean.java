@@ -17,6 +17,7 @@ import byui.cit260.piratesCaribbean.model.Ship;
 import byui.cit260.piratesCaribbean.model.Supply;
 import byui.cit260.piratesCaribbean.model.TreasureIslandLevel;
 import byui.cit260.piratesCaribbean.model.Weapons;
+import static org.omg.IOP.ENCODING_CDR_ENCAPS.value;
 
 /**
  *
@@ -208,6 +209,11 @@ public class PiratesCaribbean {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
-    
+      try {
+      number = Double.parseDouble(value);
+    } catch (NumberFormatException nf) {
+    system.out.println("\nYou must enter a valid number"
+            +" Try again or enter Q to quit.");
+    }
     
 }
