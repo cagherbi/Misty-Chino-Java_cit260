@@ -36,13 +36,13 @@ public class GameControl {
      public double calcBestTime (double levelCompleted, double totalTime){
      
      if (levelCompleted > 2){
-        return 1;
+        return -1;
      }              
      if (levelCompleted < 0 && totalTime > 1){
-         return 1; 
+         return -1; 
      }
      double bestTime = levelCompleted / totalTime;
-        return calcBestTime;
+        return 0;
      }
     
 }

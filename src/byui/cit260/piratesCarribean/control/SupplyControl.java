@@ -21,11 +21,11 @@ public class SupplyControl {
          }
         
         if (crewBoarded < 4 || timeTraveled > 3){ 
-        return 1;
+        return -1;
          }       
         
         calcSupplies = (crewBoarded * supplyKit) / timeTraveled;
-                return calcSupplies;
+                return 0;
     }
     
 }
