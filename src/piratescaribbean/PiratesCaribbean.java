@@ -17,6 +17,13 @@ import byui.cit260.piratesCaribbean.model.Ship;
 import byui.cit260.piratesCaribbean.model.Supply;
 import byui.cit260.piratesCaribbean.model.TreasureIslandLevel;
 import byui.cit260.piratesCaribbean.model.Weapons;
+import byui.cit260.piratesCarribean.view.StartProgramView;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import static org.omg.IOP.ENCODING_CDR_ENCAPS.value;
 
 /**
@@ -28,7 +35,106 @@ public class PiratesCaribbean {
     /**
      * @param args the command line arguments
      */
+    private static Game currentGame = null;
+    private static Player player = null;
+    
+    private static PrintWriter outFile = null;
+    private static BufferedReader inFile = null;
+    
+    private static PrintWriter logFile = null;
+
+    public static PrintWriter getLogFile() {
+        return logFile;
+    }
+
+    public static void setLogFile(PrintWriter logFile) {
+        PiratesCaribbean.logFile = logFile;
+    }
+    
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        PiratesCaribbean.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        PiratesCaribbean.player = player;
+    }
+
+    public static PrintWriter getOutFile() {
+        return outFile;
+    }
+
+    public static void setOutFile(PrintWriter outFile) {
+        PiratesCaribbean.outFile = outFile;
+    }
+
+    public static BufferedReader getInFile() {
+        return inFile;
+    }
+
+    public static void setInFile(BufferedReader inFile) {
+        PiratesCaribbean.inFile = inFile;
+    }
+            
+    
     public static void main(String[] args) {
+    
+        try {
+        
+        PiratesCaribbean.inFile =
+                new BufferedReader( new InputStreamReader(System.in));
+        
+        PiratesCaribbean.outFile = new PrintWriter(System.out, true);
+        
+        String filePath = "log.txt";
+        PiratesCaribbean.logFile = new PrintWriter(filePath);
+        
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.display();
+        return;
+        
+        } catch (Throwable e) {
+        
+                System.out.println(" Exception: " + e.toString() +
+                                    "\nCause: " + e.getCause() +
+                                    "\nMessage: " + e.getMessage());
+                
+                e.printStackTrace();;
+        }
+        finally {
+            try {
+                if (PiratesCaribbean.inFile != null)
+                   PiratesCaribbean.inFile.close();
+                
+                if (PiratesCaribbean.outFile != null)
+                   PiratesCaribbean.outFile.close();
+                
+                 if (PiratesCaribbean.logFile != null)
+                   PiratesCaribbean.logFile.close();
+                
+                 ErrorView.display(this.getClass().getName()
+                         "You must enter a value.");
+                         continue;
+            }
+            
+                break;
+        }
+                 
+            } catch (Exception e) {
+              ErrorView.display(this.getClass().getName()
+                           "Error reading input: " + e.getMessage());
+                return null;
+        }
+        
+        
+        
         Player playerOne = new Player();
         
             playerOne.setName("Johnny Depp");
@@ -208,12 +314,8 @@ public class PiratesCaribbean {
     private static String tiTravelTime(String string) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-      try {
-      number = Double.parseDouble(value);
-    } catch (NumberFormatException nf) {
-    system.out.println("\nYou must enter a valid number"
-            +" Try again or enter Q to quit.");
+
+    public static PrintWriter getOutFie() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
 }
