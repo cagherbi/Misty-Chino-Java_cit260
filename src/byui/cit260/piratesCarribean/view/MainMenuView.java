@@ -5,8 +5,13 @@
  */
 package byui.cit260.piratesCarribean.view;
 
+import byui.cit260.piratesCaribbean.model.Game;
 import byui.cit260.piratesCaribbean.model.Player;
 import byui.cit260.piratesCarribean.control.GameControl;
+import byui.cit260.piratesCarribean.exceptions.GameControlException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import static javax.management.Query.value;
 import piratescaribbean.PiratesCaribbean;
 
@@ -19,6 +24,7 @@ public class MainMenuView {
     private String menu;
     Object mainMenuView;
     private String value;
+    private Object console;
     
     public MainMenuView() {
         this.menu = "\n"
@@ -87,8 +93,29 @@ public class MainMenuView {
         System.out.println("*** startExistingGame function called ***");
     }
     
-    private void saveGame() {
-        System.out.println("*** saveGame function called ***");
+    private void saveGame(Game game, String filepath) 
+            throws GameControlException, IOException {
+        
+        try ( FileOutputStream fops = new FileOutputStream()filepath)) {
+            ObjectOutputStream output = new ObjectOutputStream (fops);
+            
+            output.writeObject(game);
+        }
+        catch (Exception e) {
+                throw new GameControlException(e.getMessage());
+            }
+        
+      this.console.println("\n\nEnter the file path where the game "
+                            + "is to be saved.");
+      String filePath = this.getInput();
+      
+      try {
+      
+          GameControl.saveGame(PiratesCaribbean.getCurrentGame(), filePath);
+      } catch (Exception ex) {
+          ErrorView.display("MainMenuView", ex.getMessage());
+      }
+                           
     }
     
     private void displayHelpMenu() {
@@ -108,5 +135,9 @@ private void displayNextView(Player player){
         
         mainMenuView.displayMainMenuView();
 
+    }
+
+    private String getInput() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
