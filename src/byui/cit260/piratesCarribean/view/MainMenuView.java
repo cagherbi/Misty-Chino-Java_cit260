@@ -1,4 +1,4 @@
-/*
+                                 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -93,34 +93,7 @@ public class MainMenuView {
         System.out.println("*** startExistingGame function called ***");
     }
     
-    private void saveGame(Game game, String filepath) 
-            throws GameControlException, IOException {
-        
-        try ( FileOutputStream fops = new FileOutputStream()filepath)) {
-            ObjectOutputStream output = new ObjectOutputStream (fops);
-            
-            output.writeObject(game);
-        }
-        catch (Exception e) {
-                throw new GameControlException(e.getMessage());
-            }
-        
-      this.console.println("\n\nEnter the file path where the game "
-                            + "is to be saved.");
-      String filePath = this.getInput();
-      
-      try {
-      
-          GameControl.saveGame(PiratesCaribbean.getCurrentGame(), filePath);
-      } catch (Exception ex) {
-          ErrorView.display("MainMenuView", ex.getMessage());
-      }
                            
-    }
-    
-    private void displayHelpMenu() {
-        System.out.println("*** displayHelpMenu function called ***");
-    }
     
     
         
@@ -138,6 +111,14 @@ private void displayNextView(Player player){
     }
 
     private String getInput() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void saveGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void displayHelpMenu() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
