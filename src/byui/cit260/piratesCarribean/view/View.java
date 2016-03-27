@@ -8,10 +8,14 @@ package byui.cit260.piratesCarribean.view;
 
 import byui.cit260.piratesCaribbean.model.Player;
 import byui.cit260.piratesCarribean.control.GameControl;
-import byui.cit260.piratesCarribean.view.Interface.ViewInterface;
+
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import static javax.management.Query.value;
 import piratescaribbean.PiratesCaribbean;
 
 /**
@@ -33,17 +37,15 @@ public abstract class View implements ViewInterface {
        this.displayMessage = message;
    }
    
-   @Override
-   public void display() {
+   private void display() {
        boolean done = false;
        do {
            this.console.println( this.displayMessage);
-           value = this.getInput();
+           String value = this.getInput();
            done = this.doAction(value);
        } while (!done);
    }
    
-   @Override
    public String getInput() {
        
        
@@ -56,7 +58,11 @@ public abstract class View implements ViewInterface {
            
            System.out.println("\n" + this.displayMessage);
            
-           value = keyboard.readLine();
+           try {
+               value = keyboard.readLine();
+           } catch (IOException ex) {
+               Logger.getLogger(View.class.getName()).log(Level.SEVERE, null, ex);
+           }
            value = value.trim();
            
            if (value.length() < 1) {
@@ -67,4 +73,8 @@ public abstract class View implements ViewInterface {
        }
        return value;
    }
+
+    private boolean doAction(String value) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
