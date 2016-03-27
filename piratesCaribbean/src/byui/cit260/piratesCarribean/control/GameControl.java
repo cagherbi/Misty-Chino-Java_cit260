@@ -44,5 +44,9 @@ public class GameControl {
     public static void showGameInfo() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-}
 
+    double calcBestTime(double levelCompleted, double totalTime) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+}
