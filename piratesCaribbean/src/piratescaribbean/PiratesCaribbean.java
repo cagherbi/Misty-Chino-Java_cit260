@@ -13,17 +13,97 @@ import byui.cit260.piratesCaribbean.model.PortRoyal;
 import byui.cit260.piratesCaribbean.model.Ship;
 import byui.cit260.piratesCaribbean.model.TreasureIslandLevel;
 import byui.cit260.piratesCaribbean.model.Weapons;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Misty Darrington & Chino Agherbi 
  */
 public class PiratesCaribbean {
+    
+    private static Game currentGame = null;
+    private static Player player = null;
+    
+    private static PrintWriter outFile = null;
+    private static BufferedReader inFile = null;
+    
+    private static PrintWriter logFile = null;
 
+    public static PrintWriter getLogFile() {
+        return logFile;
+    }
+
+    public static void setLogFile(PrintWriter logFile) {
+        PiratesCaribbean.logFile = logFile;
+    }
+    
+
+    public static PrintWriter getOutFile() {
+        return outFile;
+    }
+
+    public static void setOutFile(PrintWriter outFile) {
+        PiratesCaribbean.outFile = outFile;
+    }
+
+    public static BufferedReader getInFile() {
+        return inFile;
+    }
+
+    public static void setInFile(BufferedReader inFile) {
+        PiratesCaribbean.inFile = inFile;
+    }
+    
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        try {
+            
+            PiratesCaribbean.inFile = new BufferedReader(new InputStreamReader(System.in));
+            PiratesCaribbean.outFile = new PrintWriter(System.out, true);
+            
+            String filePath = "log.txt";
+            PiratesCaribbean.logFile = new PrintWriter(filePath);
+            
+            StartProgramView startProgramView = new StartProgramView();
+            startProgramView.display();
+            return;
+            
+        } catch (Throwable e) {
+            
+            System.out.println("Exception: " + e.toString() +
+                                "\nCause: " + e.getCause() +
+                                "\nMessage: " + e.getMessage());
+                                
+            e.printStackTrace();;
+        }
+        
+        finally {
+            try {
+                if (PiratesCaribbean.inFile != null)
+                    PiratesCaribbean.inFile.close();
+                
+                if (PiratesCaribbean.outFile != null)
+                    PiratesCaribbean.outFile.close(); 
+                
+                if (PiratesCaribbean.logFile != null)
+                    PiratesCaribbean.logFile.close();
+            } catch (IOException ex) {
+                System.out.println("Error closing files");
+                return;
+            }
+            PiratesCaribbean.outFile.close();
+            
+        }
+        
         Player playerOne = new Player();
         
             playerOne.setName("Johnny Depp");
@@ -146,6 +226,20 @@ public class PiratesCaribbean {
 
     public static Player getPlayer() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public static BufferedReader getInFiel() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static class StartProgramView {
+
+        public StartProgramView() {
+        }
+
+        private void display() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
     }
     
     

@@ -25,8 +25,12 @@ import piratescaribbean.PiratesCaribbean;
      *
      * @param choice
      */
-        public void doAction(char choice) {
-         
+        @Override
+        public boolean doAction(String value) {
+            
+            value = value.toUpperCase();
+            char choice = value.charAt(0);
+            
             switch (choice) {
                 case 'N':
                     this.startNewGame();
@@ -40,11 +44,14 @@ import piratescaribbean.PiratesCaribbean;
                 case 'S':
                     this.saveGame();
                     break;
+                case 'Q':
+                    return true;
                 default:
-                    System.out.println("\n*** Invalid selection *** Try again");
+                    ErrorView.display("MainMenuView", "***Invalid selection *** Try again");
                     break;
-            }
-        }
+            } return false;
+        } 
+  
 
     private void startNewGame() {
         
@@ -63,7 +70,15 @@ import piratescaribbean.PiratesCaribbean;
     }
 
     private void saveGame() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        this.console.println("\nEnter the file path for file where the game " + "is to be saved.");
+        String filePath = this.getInput();
+        
+        try {
+            GameControl.saveGame(PiratesCaribbean.getCurrentGame(), filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
     }
   
 }   
