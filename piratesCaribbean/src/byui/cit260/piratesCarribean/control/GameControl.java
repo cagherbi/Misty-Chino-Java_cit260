@@ -23,6 +23,7 @@ import piratescaribbean.PiratesCaribbean;
 public class GameControl {
 
     public static void createNewGame(Player player) {
+        System.err.println( ".createNewGame" ) ;
         
         Game game = new Game();
         PiratesCaribbean.setCurrentGame(game);
@@ -53,7 +54,11 @@ public class GameControl {
     }
 
     public static Player createPlayer(String playersName) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.err.println( ".create player=" + playersName ) ;
+        Player player = new Player() ;
+        player.setName( playersName ) ;
+        return player ;
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public static void showGameInfo() {

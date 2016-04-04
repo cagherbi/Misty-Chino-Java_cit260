@@ -23,7 +23,9 @@ public class Ship implements Serializable {
                         + "\nyou might find the treasure and come back alive.";
         
     }
-
+    public Ship ( String name ) {
+        this.shipName = name ;
+    }
     public String getDescription() {
         return description;
     }

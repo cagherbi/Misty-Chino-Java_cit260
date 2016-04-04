@@ -42,7 +42,7 @@ public abstract class View implements ViewInterface {
     
     private String message;
     
-    protected final BufferedReader keyboard = PiratesCaribbean.getInFiel();
+    protected final BufferedReader keyboard = PiratesCaribbean.getInFile();
     protected final PrintWriter console = PiratesCaribbean.getOutFile();
     private Object e;
     
