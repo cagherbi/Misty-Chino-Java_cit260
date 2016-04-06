@@ -177,7 +177,7 @@ public class PiratesCaribbean {
 
         String gameInfo = gameOne.toString();
         System.out.println(playerInfo);
-System.err.println( ".setup complete" ) ;
+
 // Need game loop
         try {
             // create gameOne and start the program

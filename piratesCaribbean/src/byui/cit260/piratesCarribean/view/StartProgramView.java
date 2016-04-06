@@ -79,15 +79,14 @@ public final class StartProgramView {
             System.err.println("\n" + this.promptMessage);
             
             //value = keyboard.nextLine();
-            value = "Misty" ; //cheat
+            value = "Misty" ; 
             value = value.trim();
             
             if (value.length() < 1) {
                 System.out.println("\nInvalid value; value can not be blank");
                 continue;
             }
-            System.err.println( "Play " + value + " for me" ) ;
-            
+                    
             break;
         }
         
