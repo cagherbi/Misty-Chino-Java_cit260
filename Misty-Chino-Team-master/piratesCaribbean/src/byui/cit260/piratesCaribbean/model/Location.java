@@ -6,11 +6,12 @@
 package byui.cit260.piratesCaribbean.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
  *
- * @author Misty
+ * @author Misty and Chino
  */
 public class Location implements Serializable {
     
@@ -19,6 +20,8 @@ public class Location implements Serializable {
     private String levelNameOne;
     private String levelNameTwo;
     private String levelNameThree;
+    private Scene scene;
+    private ArrayList<Actor> actors;
   
 
     public Location() {
@@ -89,6 +92,10 @@ public class Location implements Serializable {
             return false;
         }
         return Objects.equals(this.levelNameThree, other.levelNameThree);
+    }
+
+    void setScene(Scene scene) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     

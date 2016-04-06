@@ -10,7 +10,7 @@ import java.util.Objects;
 
 /**
  *
- * @author Misty
+ * @author Misty and Chino
  */
 public class Ship implements Serializable {
 
@@ -19,8 +19,13 @@ public class Ship implements Serializable {
     private String shipName;
 
     public Ship() {
+        this.description = "\nThis is the game of Pirate of the Caribean. If you have the grit, "
+                        + "\nyou might find the treasure and come back alive.";
+        
     }
-
+    public Ship ( String name ) {
+        this.shipName = name ;
+    }
     public String getDescription() {
         return description;
     }

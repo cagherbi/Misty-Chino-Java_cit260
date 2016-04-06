@@ -1,79 +1,43 @@
 package byui.cit260.piratesCaribbean.model;
 
-
 import java.io.Serializable;
-import java.util.Objects;
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
  *
- * @author chino
+ * @author Chino and Misty
  */
 
-
-
-public class Actor implements Serializable{
+public enum Actor implements Serializable {
     
-    //class instance variables
-    private String name;
-    private String description;
+    JackSparrow("Captain of the Black Pearl and legendary pirate of the Seven Seas."),
+    HectorBarbosa("Once a ferocious pirate and deadly enemy of Captain Jack Sparrow."),
+    DavyJones("Condemned for eternity to captain the Flying Dutchman."),
+    JoshuaGibbs("A superstitious deckhand with muted impatience for authority."),
+    WillTurner("Sails the seas to save his father, find his true identity and reunite with his true love Elizabeth Swan."),
+    ElizabethSwan("With an adventurous spirit, she has long been fascinated with the world of buccaneers."),
+    TiaDalma("A mysterious woman who wields the power of voodoo-like magic."),
+    Blackbeard("The blackest soul and the darkest heart of any pirate who ever lived."),
+    Angelica("Angelica is a dangerous pirate to match swords with.");
+    
+    private final String description;
 
-    public Actor() {
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    Actor(String description) {
+        this.description = description;
+        
     }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setName(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 59 * hash + Objects.hashCode(this.name);
-        hash = 59 * hash + Objects.hashCode(this.description);
-        return hash;
+    public void setDescription(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public String toString() {
-        return "Actor{" + "name=" + name + ", description=" + description + '}';
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Actor other = (Actor) obj;
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        if (!Objects.equals(this.description, other.description)) {
-            return false;
-        }
-        return true;
-    }
-    
 }
+    
+

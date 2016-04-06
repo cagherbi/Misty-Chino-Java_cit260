@@ -1,84 +1,84 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package byui.cit260.piratesCarribean.view;
-
 import byui.cit260.piratesCaribbean.model.Player;
 import byui.cit260.piratesCarribean.control.GameControl;
-import byui.cit260.piratesCarribean.view.InterfaceView.View;
-
+import java.util.Scanner;
+import piratescaribbean.PiratesCaribbean;
 /**
  *
- * @author Misty
+ * @author Misty and Chino
  */
-    public class MainMenuView extends View {
-       
+    public abstract class MainMenuView extends View {
+        
         public MainMenuView() {
-           
-               super("\n"
-                + "\n-----------------------------------------------"
-                + "\n| Main Menu                                   |"
-                + "\n-----------------------------------------------"
-                + "\nN - Start New Game"
-                + "\nG - Get and Start Saved Game"
-                + "\nH - Get Help and How to Play the Game"
-                + "\nS - Save Game"
-                + "\nQ - Quit"
-                + "\n-----------------------------------------------");
-    }
-    
+            super( "\n-----------------------------------------------"
+                  + "\n| Main Menu                                   |"
+                  + "\n-----------------------------------------------"
+                  + "\nN - Start New Game"
+                  + "\nG - Get and Start Saved Game"
+                  + "\nH - Get Help and How to Play the Game"
+                  + "\nS - Save Game"
+                  + "\nQ - Quit"
+                  + "\n-----------------------------------------------");
+        }
+        
+    /**
+     *
+     * @param choice
+     */
+        @Override
+        public boolean doAction(String value) {
+            
+            value = value.toUpperCase();
+            char choice = value.charAt(0);
+            
+            switch (choice) {
+                case 'N':
+                    this.startNewGame();
+                    break;
+                case 'G':
+                    this.startExistingGame();
+                    break;
+                case 'H':
+                    this.displayHelpMenu();
+                    break;
+                case 'S':
+                    this.saveGame();
+                    break;
+                case 'Q':
+                    return true;
+                default:
+                    ErrorView.display("MainMenuView", "***Invalid selection *** Try again");
+                    break;
+            } return false;
+        } 
+  
+
     private void startNewGame() {
-        GameControl.createNewGame();
+        
+        GameControl.createNewGame(PiratesCaribbean.getPlayer());
+        
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayMenu();
     }
-    
+
     private void startExistingGame() {
-        System.out.println("*** startExistingGame function called ***");
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    private void saveGame() {
-        System.out.println("*** saveGame function called ***");
-    }
-    
+
     private void displayHelpMenu() {
-        System.out.println("*** displayHelpMenu function called ***");
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
+
+    private void saveGame() {
         
-private void displayNextView(Player player){
-        System.out.println("\n================================="
-                          + "\n Welcome to the game " + player.getName()
-                          + "\n We hope you have a lot of fun!"
-                          + "\n================================"
-                           );
-
-        MainMenuView mainMenuView = new MainMenuView();
+        this.console.println("\nEnter the file path for file where the game " + "is to be saved.");
+        String filePath = this.getInput();
         
-        mainMenuView.displayMenu();
-
+        try {
+            GameControl.saveGame(PiratesCaribbean.getCurrentGame(), filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
     }
-
-        @Override
-    public void display() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-        @Override
-    public String getInput() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-        @Override
-    public boolean doAction(String value) {
-        value = value.toUpperCase();
-        return false;
-    }
-
-    private void displayMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    
-    }
+  
+}   

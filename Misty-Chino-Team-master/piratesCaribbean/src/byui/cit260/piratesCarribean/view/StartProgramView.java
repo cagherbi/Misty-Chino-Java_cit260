@@ -76,16 +76,17 @@ public final class StartProgramView {
         boolean valid = false;
         
         while (!valid) {
-            System.out.println("\n" + this.promptMessage);
+            System.err.println("\n" + this.promptMessage);
             
-            value = keyboard.nextLine();
+            //value = keyboard.nextLine();
+            value = "Misty" ; 
             value = value.trim();
             
             if (value.length() < 1) {
                 System.out.println("\nInvalid value; value can not be blank");
                 continue;
             }
-            
+                    
             break;
         }
         
