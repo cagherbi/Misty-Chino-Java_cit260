@@ -22,7 +22,7 @@ public class ShipControl {
         }
        
         double calcVoyageKits = supplyKits / crew;
-        return calcVoyageKits;
+        return 0;
     }
 }
     

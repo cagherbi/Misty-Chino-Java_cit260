@@ -1,16 +1,55 @@
 package byui.cit260.piratesCarribean.view;
+import byui.cit260.piratesCarribean.control.GameControl;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
+import piratescaribbean.PiratesCaribbean;
 /**
  *
- * @author Misty
+ * @author Misty and Chino
  */
 class AddCrewMemberView {
-    public void chooseCrew(String args[]) {
-        Scanner input= new Scanner(System.in);
-        System.out.println("Now, select your crew. You need 3, plus yourself, in order to set sail.");
+    
+    private String message;
+    
+    protected final BufferedReader keyboard = PiratesCaribbean.getInFile();
+    protected final PrintWriter console = PiratesCaribbean.getOutFile();
+    
+    public AddCrewMemberView() {
+        
     }
+    
+    public String chooseCrew(String args[]) throws IOException {
+        boolean valid = false;
+        String selection = null;
+        
+        while (!valid) {
+            
+            selection = this.keyboard.readLine();
+            selection = selection.trim();
+            
+            if (selection.length() < 1) {
+                System.out.println("\n*** Invalid Selection *** Try Again");
+                continue;
+            }
+            break;
+        }
+        return selection;
+    }
+        
+    
         public void doAction (char choice){
             choice = Character.toUpperCase(choice);
+            this.console.println("Now, select your crew. You need 3, plus yourself, in order to set sail.");
+            String filepate = this.getInput();
+            
+            try {
+                String filepath = null;
+                GameControl.saveGame(PiratesCaribbean.getCurrentGame(), filepath);
+            } catch (Exception ex) {
+                ErrorView.display("View", ex.getMessage());
+            }
                 switch (choice) {
                     case 'J':
                         this.addJackSparrow();
@@ -78,4 +117,11 @@ class AddCrewMemberView {
         private void addAngelica() {
             System.out.println("Angelica is on board.");
         }
+
+    private String getInput() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+        
+    
+    
 }

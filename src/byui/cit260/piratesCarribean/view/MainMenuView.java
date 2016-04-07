@@ -1,12 +1,18 @@
-/*
+                                 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package byui.cit260.piratesCarribean.view;
 
+import byui.cit260.piratesCaribbean.model.Game;
 import byui.cit260.piratesCaribbean.model.Player;
 import byui.cit260.piratesCarribean.control.GameControl;
+import byui.cit260.piratesCarribean.exceptions.GameControlException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import static javax.management.Query.value;
 import piratescaribbean.PiratesCaribbean;
 
 /**
@@ -17,6 +23,8 @@ public class MainMenuView {
     
     private String menu;
     Object mainMenuView;
+    private String value;
+    private Object console;
     
     public MainMenuView() {
         this.menu = "\n"
@@ -71,6 +79,8 @@ public class MainMenuView {
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
+                
+                
         }
         return false;
     }
@@ -83,13 +93,7 @@ public class MainMenuView {
         System.out.println("*** startExistingGame function called ***");
     }
     
-    private void saveGame() {
-        System.out.println("*** saveGame function called ***");
-    }
-    
-    private void displayHelpMenu() {
-        System.out.println("*** displayHelpMenu function called ***");
-    }
+                           
     
     
         
@@ -104,5 +108,17 @@ private void displayNextView(Player player){
         
         mainMenuView.displayMainMenuView();
 
+    }
+
+    private String getInput() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void saveGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void displayHelpMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

@@ -8,17 +8,43 @@ package byui.cit260.piratesCarribean.view;
 import byui.cit260.piratesCaribbean.model.Player;
 import byui.cit260.piratesCarribean.control.GameControl;
 import byui.cit260.piratesCarribean.view.Interface.ViewInterface;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import piratescaribbean.PiratesCaribbean;
 
 /**
  *
- * @author Misty
+ * @author Misty and Chino
  */
 public abstract class View implements ViewInterface {
+    
+    private void startSavedGame(){
+        
+        this.console.println("\n\nEnter the file pate for file where the game " + "is to be saved.");
+        String filepath = this.getInput();
+        
+        try {
+            GameControl.getSavedGame(filepath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
+    }
     
     protected String displayMessage;
     private String playersName;
     private final Player player;
+    
+    private String message;
+    
+    protected final BufferedReader keyboard = PiratesCaribbean.getInFile();
+    protected final PrintWriter console = PiratesCaribbean.getOutFile();
+    private Object e;
     
     public View(String message) {
         this.player = GameControl.createPlayer(playersName);
@@ -27,11 +53,11 @@ public abstract class View implements ViewInterface {
     
     @Override
     public void display() {
+        String value;
         boolean done = false;
         do {
-            String value = this.getInput();
-            if (value.toUpperCase().equals("Q"))
-                return;
+            this.console.println(this.message);
+            value = this.getInput();
             done = this.doAction(value);
         } while (!done);
     }
@@ -39,7 +65,6 @@ public abstract class View implements ViewInterface {
     @Override
     public String getInput() {
         
-        Scanner keyboard = new Scanner(System.in);
         boolean valid = false;
         String value = null;
         
@@ -47,15 +72,30 @@ public abstract class View implements ViewInterface {
             
             System.out.println("\n" + this.displayMessage);
             
-            value = keyboard.nextLine();
-            value = value.trim();
-            
-            if (value.length() < 1) {
-                System.out.println("\n*** You Must Enter a Value ***");
-                continue;
+            try {
+                value = keyboard.readLine();
+            } catch (IOException ex) { 
+                Logger.getLogger(View.class.getName()).log(Level.SEVERE, null, ex);
             }
+            value = value.trim();
+            try {
+                
+           
+            if (value.length() < 1) {
+                ErrorView.display(this.getClass().getName(),
+                                  "You must enter a value: " + getMessage());
+               return null;
+            }
+             }catch (Exception e) {
+                     ErrorView.display(this.getClass().getName(),
+                             "Error reading input: " + getMessage());
+                            }
             break;
         }
         return value;
+    }
+
+    private String getMessage() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
